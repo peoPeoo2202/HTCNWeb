@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        /* Định dạng cho phần body */
+        body{
+            background-color: lightblue; /* Màu nền */
+            font-family: Arial, sans-serif; /* Phong chữ */
+        }
+        /* Định dạng cho bên trong Form */
+        .container {
+            width: 500px; /* chiều rộng */
+            margin: 0 auto; /* căn giữa */
+            padding: 20px; /* Khoảng cách bên trong */
+            background-color: white; /* Màu nên */
+            border-radius: 5px; /* Bo tròn các góc */
+        }
+         /* Định dạng cho thẻ h1 */
+        h1 {
+            text-align: center;  /* Căn giữa */
+            margin-bottom: 20px;  /* Khoảng cách với dòng dưới */
+        }
+        label {
+            display: block;  /* Hiển thị nhãn trên 1 dòng */
+            width: 150px; /* Đặt chiều rộng cố định cho nhãn để căn chỉnh đẹp mắt */
+            margin-bottom: 5px;  /* Khoảng cách với dòng dưới */
+            vertical-align: middle; /* Căn giữa theo chiều dọc với trường nhập liệu */
+        }
+        /* Định dang cho các thẻ input loại text, email, select, textarea */
+        input[type="text"], input[type="email"], select, textarea {
+            width: 100%; /* Chiều rộng */
+            padding: 10px; /* Khoảng cách giữa các phần tử */
+            border: 1px solid #ccc; /* màu viền + độ rộng viền */
+            border-radius: 4px; /* Bo tròn góc */
+            box-sizing: border-box;  /* Chiều rộng của input bao gồm cả viền */
+            margin-bottom: 10px;   /* Khoảng cách với dòng dưới */
+        }
+        /* Định dang cho các thể input loại checkbox và radio */
+        input[type="checkbox"],input[type="radio"] {
+            margin-right: 5px; /* Khoảng cách với dòng dưới */
+        }
+        /* Định dạng cho thẻ button */
+        button {
+            background-color: #4CAF50;  /* Màu nền */
+            color: white;   /* Màu chữ */
+            padding: 10px 20px;   /* Khoảng cách giữa các phần tử */
+            border: none;    /* Không có viền */
+            border-radius: 4px;  /* Bo tròn góc */
+            cursor: pointer;   /* Hiển thị con trỏ chuột */
+            width: 100%;  /* Chiều rộng */
+        }
+        /* Định dạng cho thẻ button khi chuột di chuyển lên */
+        button:hover {
+            background-color: #45a049;   /* Màu nền khi chuột di chuyển lên */
+        }
+    </style>
+</head>
+<body>
+    <div class = "container"> 
+        <h1>Registration Form</h1>
+        <form action="" method="post">
+            <lable for="fname"> First Name:</lable>
+            <input type="text" id="fname" name="fname" >
+
+            <lable for="lname"> Last Name:</lable>
+            <input type="text" id="lname" name="lname" > <br>
+
+            <lable for="add1"> Address#1:</lable>
+            <input type="text" id="add1" name="add1" > <br>
+
+            <lable for="add2"> Address#2:</lable>
+            <input type="text" id="add2" name="add2" > <br>
+
+            <lable for="city"> City:</lable>
+            <input type="text" id="city" name="city" > 
+
+            <lable for="state"> State:</lable>
+            <input type="text" id="state" name="state" > <br>
+
+            <lable for="zip"> Zip:</lable>
+            <input type="text" id="zip" name="zip" > <br>
+
+            <lable for="country"> Country: </lable>
+                    <select id="country" name="coutry">
+                            <option value="vietnam"> Việt Nam </option>
+                            <option value="trungquoc"> Trung Quốc </option>
+                            <option value="my"> Mỹ </option>
+                            <option value="nga"> Nga </option>
+                            <option value="uc"> Úc </option>
+                    </select> <br>
+
+            <lable for="product"> Product: </lable>
+                    <select id="product" name="product">
+                            <option value="Khai1"> Khai1 </option>
+                            <option value="Khai2"> Khai2 </option>
+                            <option value="Khai3"> Khai3 </option>
+                            <option value="Khai4"> Khai4 </option>
+                            <option value="Khai5"> Khai5 </option>
+                    </select> <br>
+
+            <hr>
+
+            <lable for="datepurchased"> Date Purchased:</lable>
+            <input type="text" id="datepurchased" name="datepurchased" > <br>
+
+            <lable for="serial"> Serial#:</lable>
+            <input type="text" id="serial" name="serial" > <br>
+
+            <lable for="usedfor"> Used for:</lable> <br>
+                    <input type="radio" id="home" name="usedfor" value="home" > 
+                    <lable for="home"> Home </lable> <br>
+
+                    <input type="radio" id="eduins" name="usedfor" value="eduins" > 
+                    <lable for="eduins"> Education Institution </lable> <br>
+
+                    <input type="radio" id="busi" name="usedfor" value="busi" > 
+                    <lable for="busi"> Business </lable> <br>
+
+                    <input type="radio" id="other" name="usedfor" value="other" > 
+                    <lable for="other"> Other </lable> <br>
+
+                    <input type="radio" id="gove" name="usedfor" value="gove" > 
+                    <lable for="gove"> Goverment </lable> <br>
+
+            <lable for="sys"> System (check all that apply):</lable> <br>
+                    <input type="checkbox" id="sys" name="sys" value="wind" >        
+                    <lable for="wind"> Windowns </lable> <br>
+
+                    <input type="checkbox" id="sys" name="sys" value= "unix"> 
+                    <lable for="unix"> UNIX </lable> <br>
+
+                    <input type="checkbox" id="sys" name="sys" value="mac">
+                    <lable for="mac"> Macintosh </lable> <br>
+                    
+                    <input type="checkbox" id="sys" name="sys" value="other" >        
+                    <lable for="other"> Other </lable> <br>
+
+            <hr>
+
+            <label for="comments">Comments:</label>
+            <textarea id="comments" name="comments" rows="5" cols="40"></textarea><br><br>
+
+            <button type="submit">Click to register</button> <br>
+            <button type="reset">Click to cancel</button>
+
+        </form>
+    </div>    
+</body>
+</html>
