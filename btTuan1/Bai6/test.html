@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration Form</title>
+<style>
+body {
+  background-color: lightblue;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+label {
+  display: inline-block;
+  width: 150px; /* Đặt chiều rộng cố định cho nhãn */
+  margin-bottom: 5px;
+  vertical-align: middle;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: calc(100% - 160px); /* Trừ chiều rộng của nhãn và thêm khoảng cách */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: 5px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Registration Form</h1>
+
+  <form>
+    <label for="fname">First Name:</label>
+    <input type="text" id="fname" name="fname"><br><br>
+
+    <label for="lname">Last Name:</label>
+    <input type="text" id="lname" name="lname"><br><br>
+
+    <label for="address1">Address #1:</label>
+    <input type="text" id="address1" name="address1"><br><br>
+
+    <label for="address2">Address #2:</label>
+    <input type="text" id="address2" name="address2"><br><br>
+
+    <label for="city">City:</label>
+    <input type="text" id="city" name="city"><br><br>
+
+    <label for="state">State:</label>
+    <input type="text" id="state" name="state"><br><br>
+
+    <label for="zip">Zip:</label>
+    <input type="text" id="zip" name="zip"><br><br>
+
+    <label for="country">Country:</label>
+    <select id="country" name="country">
+      <option value="united_states">United States</option>
+      <option value="canada">Canada</option>
+      <option value="mexico">Mexico</option>
+    </select><br><br>
+
+    <label for="product">Product:</label>
+    <select id="product" name="product">
+      <option value="scanmaster">ScanMaster</option>
+      <option value="other">Other</option>
+    </select><br><br>
+
+    <label for="date_purchased">Date Purchased:</label>
+    <input type="date" id="date_purchased" name="date_purchased"><br><br>
+
+    <label for="serial_number">Serial #:</label>
+    <input type="text" id="serial_number" name="serial_number"><br><br>
+
+    <label for="used_for">Used for:</label><br>
+    <input type="radio" id="home" name="used_for" value="home">
+    <label for="home">Home</label><br>
+    <input type="radio" id="business" name="used_for" value="business">
+    <label for="business">Business</label><br>
+    <input type="radio" id="government" name="used_for" value="government">
+    <label for="government">Government</label><br>
+    <input type="radio" id="educational_institution" name="used_for" value="educational_institution">
+    <label for="educational_institution">Educational Institution</label><br>
+    <input type="radio" id="other" name="used_for" value="other">
+    <label for="other">Other</label><br><br>
+
+    <label for="system">System (check all that apply):</label><br>
+    <input type="checkbox" id="windows" name="system" value="windows">
+    <label for="windows">Windows</label><br>
+    <input type="checkbox" id="unix" name="system" value="unix">
+    <label for="unix">UNIX</label><br>
+    <input type="checkbox" id="mac" name="system" value="mac">
+    <label for="mac">Macintosh</label><br>
+    <input type="checkbox" id="other" name="system" value="other">
+    <label for="other">Other</label><br><br>
+
+    <label for="comments">Comments:</label>
+    <textarea id="comments" name="comments" rows="5" cols="40"></textarea><br><br>
+
+    <label for="color">Favorite Color:</label>
+    <span id="color-picker" class="color-picker" style="background-color: blue;"></span> 
+    <input type="color" id="color" name="color" value="#0000ff">
+    <select id="color" name="color" onchange="updateColor()">
+      <option value="#ff0000">Red</option>
+      <option value="#00ff00">Green</option>
+      <option value="#0000ff" selected>Blue</option>
+      <option value="#ffff00">Yellow</option>
+      <option value="#ff00ff">Magenta</option>
+      <option value="#00ffff">Cyan</option>
+    </select>
+  </div>
+
+  <button type="submit">Submit</button>
+</div>
+
+<script>
+function updateColor() {
+  var selectedColor = document.getElementById("color").value;
+  document.getElementById("color-picker").style.backgroundColor = selectedColor;
+}
+</script>
+
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+</body>
+</html>

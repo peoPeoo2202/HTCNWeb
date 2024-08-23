@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .khung{
+            background: white;
+            border: solid 1px lightblue;
+            margin: 0.1px;
+            padding: 10px;
+            padding: 0.1;
+        }
+        .class-picker{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-color: blue;
+            margin-right: 5px;
+        }
+        .calendar{
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="khung">
+        <label for="name"> Name: </label> <br>
+        <input type="text" id="name" name="name"> <br>
+
+        <label for="phone"> Telephone: </label> <br>
+        <input type="number" id="phone" name="phone"> <br>
+
+        <label for="email"> Email: </label> <br>
+        <input type="email" id="email" name="email"> <br>
+
+        <label for="fcolor"> Favourite Color: </label> <br>
+        <span class="color-picker"> </span>
+        <input  type="color" id="fcolor" name="fcolor" value="var(--blue)"> <br>
+        
+        <div class="calendar">
+        <label for="dateofbirth"> Date of Birth: </label> <br>
+        <input  type="date" id="dateofbirth" name="dateofbirth"> <br>
+        </div> <br>
+
+        <button type="submit"> Submit </button>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <title>Form Contact Us</title>
+        <style>
+             body {
+                font-family: Arial, Helvetica, sans-serif;
+             }
+            .khung{
+                background: white;
+                border: solid 1px lightblue;
+                margin: 0.1px;
+                padding:20px;
+                padding: 0.1px;
+                padding-bottom: 20px;
+            }
+            .khungtren{
+                background: white;
+                padding-top: 10px;
+                border: solid 1px black;
+                margin: 0.1px;
+                padding:20px;
+                padding: 0.1px;
+                margin-bottom: 10px;
+            }
+            .khungduoi{
+                background: white;
+                border: solid 1px black;
+                margin: 0.1px;
+                padding:20px;
+                padding: 0.1px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="khung"> 
+            <form> 
+                <h1> Contact Us </h1>    
+                <div class="khungtren">
+                    <p> Your message:</p>
+
+                    <label for="to"> To: </label>
+                    <input  type="text" id="to" name="to" > <br>
+
+                    <label for="youremail"> Your email: </label>
+                    <input  type="email" id="youremail" name="youremail" > <br>
+
+                    <label for="message"> Message</label>
+                    <textarea id="message" name="message" rows="5" cols="40"></textarea><br><br>
+
+                    <label for="attachfile"> Attach File </label>
+                    <input type="file" id="attachfile" name="attachfile"> <br>
+                </div>   
+             
+            <div class="khungduoi"> 
+                <p> How you found us:</p>
+                <labe for="howdidyouhearofus"> How did you  hear of us </labe>
+                    <select id="howdidyouhearofus" name="howdidyouhearofus">    
+                        <option value="google"> Google </option>
+                        <option value="fb"> Facebook </option>
+                        <option value="ins"> Instagram </option>
+                        <option value="zalo"> Zalo </option>
+                        <option value="tiktok"> Tik Tok</option>
+                    </select> <br>
+                <p>            
+                    <label for="newsletter"> Newsletter </label>                
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    Ensure this box is checked if you would like to reveive email updates</p>
+            </div>
+
+            <button type="submit">Send message</button> <br>
+
+            </form>  
+        </div> 
+    </body>
+</html>
