@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .box {
+            background-color: #333;
+            /* height: 20vh; */
+            color: #fff;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        .menu {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+        }
+        
+        ul>li {
+            position: relative;
+        }
+        
+        ul>li:hover>.submenu {
+            display: block;
+        }
+        
+        a {
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            padding: 18px 20px;
+        }
+        
+        header {
+            background-color: orange;
+            height: 100px;
+        }
+        
+        main {
+            display: flex;
+        }
+        
+        .menuleft {
+            width: 20%;
+            background-color: pink;
+            height: 60vh;
+        }
+        
+        section {
+            width: 40%;
+            height: 60vh;
+            background-color: red;
+        }
+        
+        aside {
+            width: 40%;
+            background-color: green;
+        }
+        
+        footer {
+            height: 20vh;
+            background-color: blue;
+        }
+        
+        .submenu {
+            right: -100%;
+            position: absolute;
+            background-color: purple;
+            width: 100px;
+            height: 230px;
+            display: none;
+        }
+        
+        .submenu>li:not(.submenu>li:last-child) {
+            border-bottom: 1px solid #333;
+        }
+        
+        .menu>li>.submenu {
+            left: 0%;
+            /* top: 0%; */
+        }
+        
+        .menu>li>.submenu .submenu {
+            top: 0%;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="box">
+        <ul class="menu">
+            <li>
+                <a href="#!">Home</a>
+                <ul class="submenu">
+                    <li><a href="#!">Type 1</a></li>
+                    <li><a href="#!">Type 2</a></li>
+                    <li><a href="#!">Type 3</a></li>
+                    <li><a href="#!">Type 4</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#!">Data</a>
+                <ul class="submenu">
+                    <li><a href="#!">Type 1</a>
+                        <ul class="submenu">
+                            <li><a href="#!">Type 1</a></li>
+                            <li><a href="#!">Type 2</a></li>
+                            <li><a href="#!">Type 3</a></li>
+                            <li><a href="#!">Type 4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#!">Type 2</a>
+                        <ul class="submenu">
+                            <li><a href="#!">Type 1</a></li>
+                            <li><a href="#!">Type 2</a></li>
+                            <li><a href="#!">Type 3</a></li>
+                            <li><a href="#!">Type 4</a>
+                                <ul class="submenu">
+                                    <li><a href="#!">Type 1</a></li>
+                                    <li><a href="#!">Type 2</a></li>
+                                    <li><a href="#!">Type 3</a></li>
+                                    <li><a href="#!">Type 4</a>
+                                        <ul class="submenu">
+                                            <li><a href="#!">Type 1</a></li>
+                                            <li><a href="#!">Type 2</a></li>
+                                            <li><a href="#!">Type 3</a></li>
+                                            <li><a href="#!">Type 4</a>
+                                                <ul class="submenu">
+                                                    <li><a href="#!">Type 1</a></li>
+                                                    <li><a href="#!">Type 2</a></li>
+                                                    <li><a href="#!">Type 3</a></li>
+                                                    <li><a href="#!">Type 4</a>
+                                                        <ul class="submenu">
+                                                            <li><a href="#!">Type 1</a></li>
+                                                            <li><a href="#!">Type 2</a></li>
+                                                            <li><a href="#!">Type 3</a></li>
+                                                            <li><a href="#!">Type 4</a>
+                                                                <ul class="submenu">
+                                                                    <li><a href="#!">Type 1</a></li>
+                                                                    <li><a href="#!">Type 2</a></li>
+                                                                    <li><a href="#!">Type 3</a></li>
+                                                                    <li><a href="#!">Type 4</a>
+                                                                        <ul class="submenu">
+                                                                            <li><a href="#!">Type 1</a></li>
+                                                                            <li><a href="#!">Type 2</a></li>
+                                                                            <li><a href="#!">Type 3</a></li>
+                                                                            <li><a href="#!">Type 4</a></li>
+                                                                        </ul>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#!">Type 3</a></li>
+                    <li><a href="#!">Type 4</a></li>
+                </ul>
+            </li>
+            <li><a href="#!">Service</a></li>
+            <li><a href="#!">About</a></li>
+            <li><a href="#!">Help</a></li>
+        </ul>
+    </nav>
+    <header>
+
+    </header>
+    <main>
+        <nav class="menuleft">
+
+        </nav>
+        <section>
+
+        </section>
+        <aside>
+
+        </aside>
+    </main>
+    <footer>
+
+    </footer>
+
+</body>
+
+</html>
